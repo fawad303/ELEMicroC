@@ -1,0 +1,32 @@
+//Global Variables
+//Vaariables for street signal
+int Rr=0;
+int Yr=1;
+int Gr=2;
+
+void setup() {
+ pinMode(Rr,OUTPUT);
+  pinMode(Yr,OUTPUT);
+  pinMode(Gr,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+      digitalWrite(Rr,HIGH);
+      delay(300);
+      digitalWrite(Rr,LOW);
+      digitalWrite(Yr,HIGH);
+      delay(350);      
+      digitalWrite(Yr,LOW);     
+      digitalWrite(Gr,HIGH);
+      delay(500);
+           
+      digitalWrite(Gr,LOW);
+      digitalWrite(Yr,HIGH);
+      delay(350);
+      digitalWrite(Yr,LOW);
+      digitalWrite(Rr,HIGH);
+      
+}
