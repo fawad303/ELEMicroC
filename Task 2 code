@@ -1,0 +1,56 @@
+//Global Variables
+//Vaariables for street signal
+int Rr=5;
+int Yr=1;
+int Gr=2;
+
+
+//variables for padestrian signal
+int Rp=3;
+int Gp=4;
+int PB=7;
+
+int x;
+void setup() {
+ pinMode(Rr,OUTPUT);
+  pinMode(Yr,OUTPUT);
+  pinMode(Gr,OUTPUT);
+
+ pinMode(Rp,OUTPUT);
+  pinMode(Gp,OUTPUT);
+
+pinMode(PB,INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+        digitalWrite(Gr,HIGH);
+      digitalWrite(Rp,HIGH);
+
+if (digitalRead(PB)== HIGH){
+  delay(100);
+           
+      digitalWrite(Gr,LOW);
+      digitalWrite(Yr,HIGH);
+      delay(350);
+      digitalWrite(Yr,LOW);
+      digitalWrite(Rr,HIGH);
+        delay(200);
+digitalWrite(Rp,LOW);
+      digitalWrite(Gp,HIGH);
+delay(500);
+digitalWrite(Gp,LOW);
+  delay(100);
+
+        digitalWrite(Rr,LOW);
+
+        digitalWrite(Yr,HIGH);
+    delay(100);
+        digitalWrite(Yr,LOW);
+        digitalWrite(Gr,HIGH);
+        digitalWrite(Rp,HIGH);
+
+
+  }
+      
+}
